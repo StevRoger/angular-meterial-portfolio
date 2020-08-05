@@ -1,0 +1,15 @@
+$primary: #673ab7;
+
+.section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 32px;
+        border-bottom: 3px solid $primary;
+        width: 100px;
+    }
+}

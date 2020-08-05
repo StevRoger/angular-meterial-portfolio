@@ -1,0 +1,77 @@
+<component-navbar></component-navbar>
+
+<section>
+  <div class="container-fluid mb-5">
+    <div class="row">
+      <div class="col-12 px-0">
+        <carousel>
+          <slide *ngFor="let item of lstSliders">
+            <img [src]="item?.img || null" [alt]="item?.id || '-'" class="home-slider">
+            <div class="carousel-caption d-block">
+              <h3>{{item?.title || '-'}}</h3>
+              <p>{{item?.subtitle || '-'}}</p>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="section-title">Getting start</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit vel reprehenderit consequuntur beatae culpa
+          quod repellendus ea atque commodi, magni aliquid minima veritatis aspernatur explicabo aliquam quam corrupti
+          consectetur molestiae.</p>
+        <button mat-stroked-button class="button-lg mb-4 mb-md-0">View Plans</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background-color: #f5f5f5;">
+  <div class="container mb-5 pt-5">
+    <div class="row">
+
+      <div class="col-12 text-center">
+        <h3 class="section-title">Benifit & Opportunity</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit vel reprehenderit consequuntur beatae culpa
+          quod repellendus ea atque commodi, magni aliquid minima.</p>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2">
+        <img src="assets/svg/bg-02.svg" class="getting-start-img" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mb-5">
+    <div class="row">
+
+      <div class="col-12 text-center mb-3">
+        <h3 class="section-title">Plans & Pricing</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <div class="col-12 col-md-4 mb-3 mb-md-0" *ngFor="let item of lstPlans">
+        <mat-card class="card-pricing">
+          <mat-card-header class="text-center">
+            <mat-card-title>{{item?.name || '-'}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="px-4 card-content">
+            <img [src]="item?.img || null" class="pricing-img mb-3" alt="">
+            <p>{{item?.short_desc || '-'}}</p>
+          </mat-card-content>
+          <mat-card-footer class="p-4">
+            <button mat-stroked-button class="button-lg btn-block"
+              (click)="openPlan('any')">{{item?.cost || '-'}}</button>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

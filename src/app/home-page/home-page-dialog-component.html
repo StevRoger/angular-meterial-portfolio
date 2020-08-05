@@ -1,0 +1,42 @@
+<section>
+    <div class="container">
+        <div class="row" style="width: 60vw">
+            <div class="col-12 d-flex justify-content-start mb-3">
+                <div class="my-auto">
+                    <h5 class="section-title">Subcription informations</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-row mb-3">
+                    <div class="col-12 col-md-6">
+                        <mat-form-field class="w-100">
+                            <input matInput type="text" placeholder="Name">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <mat-form-field class="w-100">
+                            <input matInput type="email" placeholder="Email">
+                            <mat-hint align="start">We'll sent verification via this email</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-12">
+                        <h6 class="section-title">Mastermind benifit</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <img src="assets/svg/bg-08.svg" width="100%" class="my-auto" alt="">
+            </div>
+            <div class="col-12 d-flex justify-content-end mt-5">
+                <div class="my-auto mr-3">
+                    <button mat-button (click)="closeDialog()">Cancel</button>
+                </div>
+                <div class="my-auto">
+                    <button mat-stroked-button class="button-lg px-4 text-uppercase" (click)="openSnackBar()">Start Subcription</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

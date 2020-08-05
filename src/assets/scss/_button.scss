@@ -1,0 +1,26 @@
+$primary: #673ab7;
+
+.button {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: $primary;
+        color: #ffffff;
+        transition: 0.3s ease;
+    }
+
+    &-lg {
+        padding: 5px 35px !important;
+        border: 2px solid $primary !important;
+        color: $primary !important;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: $primary !important;
+            color: #ffffff !important;
+            transition: 0.3s ease !important;
+        }
+    }
+}
