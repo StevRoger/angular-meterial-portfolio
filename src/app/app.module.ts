@@ -11,6 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { ComponentFooterComponent } from './component-footer/component-footer.co
     MatIconModule,
     MatSnackBarModule,
     MatListModule,
+    MatTableModule,
     CarouselModule.forRoot()
   ],
   providers: [],

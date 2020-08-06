@@ -1,5 +1,4 @@
 footer {
-    // background-color: #101325;
     background: repeating-linear-gradient(
         45deg,
         rgb(27, 27, 27) 0px,
@@ -28,4 +27,12 @@ footer {
     letter-spacing: 1px;
     color: #e6e6e6;
     margin-bottom: 15px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        border-bottom: 2px solid #e6e6e6;
+        width: 45px;
+    }
 }
