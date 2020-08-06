@@ -35,6 +35,10 @@ export class HomePageComponent implements OnInit {
     let dialogRef = this.dialog.open(HomePageDialog, {});
   }
 
+  onScroll(destination: any) {
+    destination.scrollIntoView({ behavior: "smooth" });
+  }
+
 
 
 }
@@ -47,6 +51,15 @@ export class HomePageComponent implements OnInit {
 export class HomePageDialog {
 
   message: string = "Subcription will start from 01 August 2020";
+
+  lstBenifit: any[] = [
+    { title: "Improve your business" },
+    { title: "Learn about criticle part in business" },
+    { title: "Competable with the top business" },
+    { title: "Contact with the expert anytime" },
+    { title: "Cancel with money back garantee" },
+  ]
+
   constructor(
     public dialogRef: MatDialogRef<HomePageDialog>,
     private snackBar: MatSnackBar,

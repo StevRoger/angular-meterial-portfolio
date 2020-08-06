@@ -21,8 +21,16 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-12">
+                    <div class="col-12 mb-3">
                         <h6 class="section-title">Mastermind benifit</h6>
+                    </div>
+                    <div class="col-12">
+                        <mat-list>
+                            <mat-list-item *ngFor="let folder of lstBenifit">
+                                <mat-icon mat-list-icon>done</mat-icon>
+                                <h4 mat-line>{{folder.title}}</h4>
+                            </mat-list-item>
+                        </mat-list>
                     </div>
                 </div>
             </div>
@@ -34,7 +42,8 @@
                     <button mat-button (click)="closeDialog()">Cancel</button>
                 </div>
                 <div class="my-auto">
-                    <button mat-stroked-button class="button-lg px-4 text-uppercase" (click)="openSnackBar()">Start Subcription</button>
+                    <button mat-stroked-button class="button-lg px-4 text-uppercase" (click)="openSnackBar()">Start
+                        Subcription</button>
                 </div>
             </div>
         </div>

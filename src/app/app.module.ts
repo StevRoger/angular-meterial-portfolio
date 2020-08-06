@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,6 +45,7 @@ import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pr
     MatDialogModule,
     MatIconModule,
     MatSnackBarModule,
+    MatListModule,
     CarouselModule.forRoot()
   ],
   providers: [],
