@@ -14,3 +14,18 @@ $primary: #673ab7;
         width: 100px;
     }
 }
+
+.view-all-link {
+    color: #101325;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif !important;
+}
+.txt-primary {
+    color: $primary;
+
+    &:hover {
+        color: $primary !important;
+    }
+}

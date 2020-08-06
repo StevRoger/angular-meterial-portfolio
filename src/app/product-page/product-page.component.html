@@ -1,0 +1,92 @@
+<component-navbar></component-navbar>
+
+<section>
+  <div class="container-fluid mb-5">
+    <div class="row">
+      <div class="col-12 px-0">
+        <carousel>
+          <slide *ngFor="let item of lstSliders">
+            <img [src]="item?.img || null" [alt]="item?.id || '-'" class="product-slider">
+            <div class="carousel-caption d-block">
+              <h3>{{item?.title || '-'}}</h3>
+              <p>{{item?.subtitle || '-'}}</p>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <!-- Row 1 -->
+    <div class="row mb-5">
+      <div class="col-12 mb-3 d-flex justify-content-between">
+        <div class="my-auto">
+          <h5 class="section-title">Recently Picks</h5>
+        </div>
+        <div class="my-auto">
+          <button mat-button>View All<span><i class="fa fa-angle-right ml-1" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 mb-3" *ngFor="let item of lstFoods">
+        <app-product-card [(product)]="item"></app-product-card>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row mb-5">
+      <div class="col-12 mb-3 d-flex justify-content-between">
+        <div class="my-auto">
+          <h5 class="section-title">Editor's Choices</h5>
+        </div>
+        <div class="my-auto">
+          <button mat-button>View All<span><i class="fa fa-angle-right ml-1" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 mb-3" *ngFor="let item of lstFoods">
+        <app-product-card [(product)]="item"></app-product-card>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row mb-5">
+      <div class="col-12 mb-3 d-flex justify-content-between">
+        <div class="my-auto">
+          <h5 class="section-title">Today's Deal</h5>
+        </div>
+        <div class="my-auto">
+          <button mat-button>View All<span><i class="fa fa-angle-right ml-1" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 mb-3" *ngFor="let item of lstFoods">
+        <app-product-card [(product)]="item"></app-product-card>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row mb-5">
+      <div class="col-12 mb-3 d-flex justify-content-between">
+        <div class="my-auto">
+          <h5 class="section-title">From Popular Stores</h5>
+        </div>
+        <div class="my-auto">
+          <button mat-button>View All<span><i class="fa fa-angle-right ml-1" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 mb-3" *ngFor="let item of lstFoods">
+        <app-product-card [(product)]="item"></app-product-card>
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <p class="hint">Can't find what you're looking for? <span><a href="" class="txt-primary">View All
+              Products</a></span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-component-footer></app-component-footer>

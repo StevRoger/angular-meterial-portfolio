@@ -1,0 +1,26 @@
+$primary: #673ab7;
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center center;
+}
+mat-card {
+    min-height: 100%;
+
+    h6 {
+        font-family: "Inter", sans-serif !important;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}
+.product-card-price {
+    font-family: "Inter", sans-serif !important;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: $primary;
+}
+mat-hint {
+    font-family: "Inter", sans-serif !important;
+}

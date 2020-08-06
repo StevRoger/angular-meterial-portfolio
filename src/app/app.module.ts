@@ -22,6 +22,8 @@ import { ProductComponent } from './product/product.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pricing-plan-dialog.component';
 import { ComponentFooterComponent } from './component-footer/component-footer.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { ProductCardComponent } from './_components/product-card/product-card.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { ComponentFooterComponent } from './component-footer/component-footer.co
     PricingPlanDialogComponent,
     HomePageDialog,
     ComponentFooterComponent,
+    ProductPageComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
