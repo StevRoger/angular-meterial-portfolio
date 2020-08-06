@@ -1,0 +1,31 @@
+footer {
+    // background-color: #101325;
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(27, 27, 27) 0px,
+        rgb(27, 27, 27) 97px,
+        rgb(24, 24, 24) 97px,
+        rgb(24, 24, 24) 194px,
+        rgb(20, 20, 20) 194px,
+        rgb(20, 20, 20) 291px
+    );
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "Inter", sans-serif !important;
+
+    a {
+        display: block;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+}
+.footer-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e6e6e6;
+    margin-bottom: 15px;
+}

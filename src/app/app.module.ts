@@ -20,6 +20,7 @@ import { FormComponent } from './form/form.component';
 import { ProductComponent } from './product/product.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pricing-plan-dialog.component';
+import { ComponentFooterComponent } from './component-footer/component-footer.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pr
     ProductComponent,
     PricingPlanDialogComponent,
     HomePageDialog,
+    ComponentFooterComponent,
   ],
   imports: [
     BrowserModule,

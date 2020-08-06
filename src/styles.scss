@@ -5,6 +5,11 @@
 @import "./assets/scss/typography";
 @import "./assets/scss/button";
 
+html {
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: "Open Sans", "Roboto", sans-serif;
   margin: 0;
