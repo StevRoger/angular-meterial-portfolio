@@ -8,10 +8,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatListModule} from '@angular/material/list';
-import {MatTableModule} from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +26,7 @@ import { ProductComponent } from './product/product.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pricing-plan-dialog.component';
 import { ComponentFooterComponent } from './component-footer/component-footer.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { ProductPageComponent, ProductDetailPopup } from './product-page/product-page.component';
 import { ProductCardComponent } from './_components/product-card/product-card.component';
 
 
@@ -38,6 +42,7 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     ComponentFooterComponent,
     ProductPageComponent,
     ProductCardComponent,
+    ProductDetailPopup,
   ],
   imports: [
     BrowserModule,
@@ -54,10 +59,13 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     MatSnackBarModule,
     MatListModule,
     MatTableModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
     CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [HomePageDialog],
+  entryComponents: [HomePageDialog, ProductDetailPopup],
 })
 export class AppModule { }

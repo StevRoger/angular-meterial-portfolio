@@ -70,7 +70,7 @@ export class HomePageComponent implements OnInit {
 
 @Component({
   selector: "home-page-dialog-component",
-  templateUrl: "home-page-dialog-component.html",
+  templateUrl: "./home-page-dialog-component.html",
 })
 export class HomePageDialog {
 

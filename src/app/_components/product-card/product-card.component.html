@@ -13,10 +13,10 @@
         </p>
       </div>
       <div class="col-12 d-flex justify-content-between">
-        <button class="product-button" mat-button>View<span><i class="fa fa-angle-right ml-1"
-              aria-hidden="true"></i></span></button>
+        <button class="product-button" mat-button (click)="onClickView(product.id)">View<span><i
+              class="fa fa-angle-right ml-1" aria-hidden="true"></i></span></button>
         <div class="my-auto">
-          <p class="product-card-price">$59.24</p>
+          <p class="product-card-price">{{product.price | currency}}</p>
         </div>
       </div>
     </div>

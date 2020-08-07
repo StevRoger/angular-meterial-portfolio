@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+
+let activeProductId: string = "";
 
 @Component({
   selector: 'app-product-page',
@@ -7,20 +10,77 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductPageComponent implements OnInit {
 
-  lstSliders: any [] = [
+  lstSliders: any[] = [
     { id: "001", img: "assets/bg-img/bg-04.jpg", title: "Slide 1", subtitle: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.", short_desc: "" },
     { id: "002", img: "assets/bg-img/bg-04.jpg", title: "Slide 2", subtitle: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.", short_desc: "" },
   ]
 
-  lstFoods: any [] = [
-    {id: "", img: "assets/product/food.jpg", title: "Product Name", price: "", short_desc: "" },
-    {id: "", img: "assets/product/food.jpg", title: "Product Name", price: "", short_desc: "" },
-    {id: "", img: "assets/product/food.jpg", title: "Product Name", price: "", short_desc: "" },
-    {id: "", img: "assets/product/food.jpg", title: "Product Name", price: "", short_desc: "" },
+  lstFoods: any[] = [
+    { id: "001", img: "assets/product/food.jpg", title: "Razer Synosa Pro Bundle", price: 54.99, short_desc: "" },
+    { id: "002", img: "assets/product/food.jpg", title: "Fantech K65", price: 36.99, short_desc: "" },
+    { id: "003", img: "assets/product/food.jpg", title: "Kraken X Ultimate", price: 69.99, short_desc: "" },
+    { id: "004", img: "assets/product/food.jpg", title: "Deathadder 2 Pro", price: 119.50, short_desc: "" },
   ]
-  constructor() { }
+
+  constructor(
+    private dialog: MatDialog,
+  ) { }
 
   ngOnInit() {
+  }
+
+  onViewProductDialog(event: any) {
+    activeProductId = event;
+    this.dialog.open(ProductDetailPopup, {});
+  }
+
+}
+
+
+@Component({
+  selector: "product-detail-popup",
+  templateUrl: "./product-detail-popup.html",
+  styleUrls: ['./product-page.component.scss']
+})
+export class ProductDetailPopup implements OnInit {
+
+  lstFoods: any[] = [
+    { id: "001", img: "assets/product/food.jpg", title: "Razer Synosa Pro Bundle", price: 54.99, short_desc: "" },
+    { id: "002", img: "assets/product/food.jpg", title: "Fantech K65", price: 36.99, short_desc: "" },
+    { id: "003", img: "assets/product/food.jpg", title: "Kraken X Ultimate", price: 69.99, short_desc: "" },
+    { id: "004", img: "assets/product/food.jpg", title: "Deathadder 2 Pro", price: 119.50, short_desc: "" },
+  ]
+
+  lstSpec: any[] = [
+    { spec: "Removable Razer™ HyperClear Cardioid Mic with USB Sound Card" },
+    { spec: "Advanced mic control features" },
+    { spec: "Ultra-soft FlowKnit memory foam ear cushions" },
+    { spec: "Razer™ SpeedFlex Cable" },
+    { spec: "THX Spatial Audio" },
+    { spec: "Connectivity – 3.5mm jack + USB sound card" },
+    { spec: "Weighs 262g" },
+  ]
+
+  activeProduct: any = {}
+
+  constructor(
+    public dialogRef: MatDialogRef<ProductDetailPopup>,
+  ) { }
+
+  ngOnInit() {
+    if (activeProductId) {
+      this.lstFoods.forEach(item => {
+        if (item.id == activeProductId) {
+          this.activeProduct = item;
+        }
+      });
+    }
+  }
+
+
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 
 }

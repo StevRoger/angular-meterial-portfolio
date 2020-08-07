@@ -8,6 +8,12 @@ $primary: #673ab7;
 }
 mat-card {
     min-height: 100%;
+    border: 2px solid transparent;
+
+    &:hover {
+        border: 2px solid $primary;
+        transition: 0.3s linear;
+    }
 
     h6 {
         font-family: "Inter", sans-serif !important;
