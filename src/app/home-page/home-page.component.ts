@@ -96,7 +96,11 @@ export class HomePageDialog {
 
   openSnackBar(action: string) {
     this.closeDialog();
-    this.snackBar.open(this.message, action, { duration: 3000 });
+    this.snackBar.open(this.message, action, { 
+      duration: 3000, 
+      verticalPosition: 'bottom', 
+      horizontalPosition: 'start',
+      panelClass: ['primary-bg'] });
   }
 
 }

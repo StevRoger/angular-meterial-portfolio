@@ -1,65 +1,97 @@
-<section>
-    <div class="container">
-        <div class="row" style="width: 60vw;">
-            <div class="col-12 d-flex justify-content-between mb-3">
-                <div class="my-auto">
-                    <h5 class="section-title">Product Detail</h5>
-                </div>
-                <div class="my-auto">
-                    <button mat-button (click)="closeDialog()"><span><i class="fa fa-angle-left mr-2"
-                                aria-hidden="true"></i></span>Close</button>
-                </div>
+<!-- <h2 mat-dialog-title>Delete all</h2> -->
+<div mat-dialog-title>
+    <div class="form-row">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="my-auto">
+                <h5 class="section-title">Product Detail</h5>
             </div>
-            <div class="col-12 col-md-6">
-                <img [src]="activeProduct.img" class="active-product-popup-img" alt="">
-            </div>
-            <div class="col-12 col-md-6 product-detail">
-                <div class="mb-3">
-                    <h6>{{activeProduct?.title || '-'}}</h6>
-                    <h6>{{activeProduct?.price || 0 | currency}}</h6>
-                    <p>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </p>
-                    <p>From cheering crowds to the hum of your rig, shut noise out and enjoy uninterrupted focus with
-                        special closed earcups that fully cover your ears, aided by plush cushions that form a perfect
-                        seal for greater sound isolation.</p>
-                </div>
-                <div>
-                    <mat-hint class="d-block mb-1">Avialable Colors:</mat-hint>
-                    <mat-radio-group aria-label="Select an option">
-                        <mat-radio-button color="primary" class="mr-3" value="1">Mercury White</mat-radio-button>
-                        <mat-radio-button color="primary" value="2">Mate Black</mat-radio-button>
-                    </mat-radio-group>
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Size</mat-label>
-                        <mat-select>
-                            <mat-option [value]="'Large'">Large</mat-option>
-                            <mat-option [value]="'Medium'">Medium</mat-option>
-                            <mat-option [value]="'Small'">Small</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div class="mb-1">
-                    <mat-form-field>
-                        <mat-label>Quantity</mat-label>
-                        <input type="number" matInput placeholder="Quantity" value="1">
-                    </mat-form-field>
-                </div>
-                <div class="mb-1">
-                    <mat-checkbox color="primary">Use fast shipping ($9.99)</mat-checkbox>
-                </div>
-                <div class="mb-1">
-                    <mat-checkbox color="primary">Agreed to Razer's terms and conditions</mat-checkbox>
-                </div>
-                <div class="py-3">
-                    <button mat-stroked-button class="button-lg btn-block text-uppercase mt-3">Add to card</button>
-                </div>
+            <div class="my-auto">
+                <button mat-button (click)="closeDialog()"><span><i class="fa fa-angle-left mr-2"
+                            aria-hidden="true"></i></span>Close</button>
             </div>
         </div>
     </div>
-</section>
+</div>
+<mat-dialog-content>
+    <section>
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-12 d-flex justify-content-between mb-3">
+                    <div class="my-auto">
+                        <h5 class="section-title">Product Detail</h5>
+                    </div>
+                    <div class="my-auto">
+                        <button mat-button (click)="closeDialog()"><span><i class="fa fa-angle-left mr-2"
+                                    aria-hidden="true"></i></span>Close</button>
+                    </div>
+                </div> -->
+                <div class="col-12 col-md-6">
+                    <img [src]="activeProduct.img" class="active-product-popup-img" alt="">
+                </div>
+                <div class="col-12 col-md-6 product-detail">
+                    <div class="mb-3">
+                        <h6>{{activeProduct?.title || '-'}}</h6>
+                        <h6>{{activeProduct?.price || 0 | currency}}</h6>
+                        <p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        </p>
+                        <p>From cheering crowds to the hum of your rig, shut noise out and enjoy uninterrupted focus
+                            with
+                            special closed earcups that fully cover your ears, aided by plush cushions that form a
+                            perfect
+                            seal for greater sound isolation.</p>
+                    </div>
+                    <div>
+                        <mat-hint class="d-block mb-1">Avialable Colors:</mat-hint>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button color="primary" class="mr-3" value="1">Mercury White</mat-radio-button>
+                            <mat-radio-button color="primary" value="2">Mate Black</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Size</mat-label>
+                            <mat-select>
+                                <mat-option [value]="'Large'">Large</mat-option>
+                                <mat-option [value]="'Medium'">Medium</mat-option>
+                                <mat-option [value]="'Small'">Small</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-1">
+                        <mat-form-field>
+                            <mat-label>Quantity</mat-label>
+                            <input type="number" matInput placeholder="Quantity" value="1">
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-1">
+                        <mat-checkbox color="primary">Use fast shipping ($9.99)</mat-checkbox>
+                    </div>
+                    <div class="mb-1">
+                        <mat-checkbox color="primary">Agreed to Razer's terms and conditions</mat-checkbox>
+                    </div>
+                    <div class="py-3">
+                        <button mat-stroked-button class="button-lg btn-block text-uppercase mt-3"
+                            (click)="onAddToCart('View Cart')">Add to card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</mat-dialog-content>
+<!-- <mat-dialog-actions class="d-flex justify-content-end">
+    <button mat-stroked-button [mat-dialog-close]="true" class="button-lg btn-block text-uppercase">Add to card</button>
+    <div class="form-row">
+        <div class="col-12">
+            <div class="my-auto">
+                
+            </div>
+        </div>
+    </div>
+    <button mat-button mat-dialog-close>No</button>
+    The mat-dialog-close directive optionally accepts a value as a result for the dialog.
+    <button mat-button [mat-dialog-close]="true">Yes</button>
+</mat-dialog-actions> -->

@@ -1,6 +1,21 @@
-<div class="mat-app-background basic-container shadow-sm">
-  <button mat-button routerLink="/home" [ngClass]="{'nav-active': activePage == 'home'}">Home</button>
-  <button mat-button routerLink="/product" [ngClass]="{'nav-active': activePage == 'product'}">Products</button>
-  <button mat-button routerLink="/home">Services</button>
-  <button mat-button routerLink="/home">Contact</button>
+<div class="mat-app-background basic-container shadow-sm main-nav">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="">
+        <button mat-button routerLink="/home" [ngClass]="{'nav-active': activePage == 'home'}">Home</button>
+        <button mat-button routerLink="/product" [ngClass]="{'nav-active': activePage == 'product'}">Products</button>
+        <button mat-button routerLink="/home">Services</button>
+        <button mat-button routerLink="/home">Contact</button>
+      </div>
+      <div class="">
+        <button mat-button><span class="material-icons">search</span></button>
+        <button mat-button><span class="material-icons">local_mall</span></button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mobile-nav position-relative">
+  <button mat-button class="nav-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
 </div>

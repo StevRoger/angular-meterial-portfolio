@@ -80,13 +80,24 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
       </div>
       <div class="col-12">
-        <mat-card class="service-card-header mb-2">
+        <!-- <mat-card class="service-card-header mb-2">
           <div class="form-row">
             <div class="col-12 text-center">
               <mat-card-title class="mb-0"><mat-icon>next_plan</mat-icon> These are the list of our services</mat-card-title>
             </div>
           </div>
-        </mat-card>
+        </mat-card> -->
+        <mat-toolbar class="service-card-header mb-2 shadow-sm">
+          <div class="form-row">
+            <div class="col-12 text-center">
+              <mat-card-title class="mb-0">
+                <span>
+                  <mat-icon>next_plan</mat-icon>
+                </span> These are the list of our services
+              </mat-card-title>
+            </div>
+          </div>
+        </mat-toolbar>
 
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
 

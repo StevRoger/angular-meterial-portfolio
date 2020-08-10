@@ -15,6 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +25,6 @@ import { ComponentNavbarComponent } from './component-navbar/component-navbar.co
 import { FormComponent } from './form/form.component';
 import { ProductComponent } from './product/product.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { PricingPlanDialogComponent } from './_components/pricing-plan-dialog/pricing-plan-dialog.component';
 import { ComponentFooterComponent } from './component-footer/component-footer.component';
 import { ProductPageComponent, ProductDetailPopup } from './product-page/product-page.component';
 import { ProductCardComponent } from './_components/product-card/product-card.component';
@@ -37,7 +37,6 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     ComponentNavbarComponent,
     FormComponent,
     ProductComponent,
-    PricingPlanDialogComponent,
     HomePageDialog,
     ComponentFooterComponent,
     ProductPageComponent,
@@ -62,6 +61,7 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
+    MatToolbarModule,
     CarouselModule.forRoot()
   ],
   providers: [],

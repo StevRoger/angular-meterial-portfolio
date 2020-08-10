@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 
 let activeProductId: string = "";
 
@@ -61,10 +61,12 @@ export class ProductDetailPopup implements OnInit {
     { spec: "Weighs 262g" },
   ]
 
-  activeProduct: any = {}
+  activeProduct: any = {};
+  message: string = "";
 
   constructor(
     public dialogRef: MatDialogRef<ProductDetailPopup>,
+    private snackBar: MatSnackBar,
   ) { }
 
   ngOnInit() {
@@ -75,6 +77,16 @@ export class ProductDetailPopup implements OnInit {
         }
       });
     }
+  }
+
+  onAddToCart(action: string) {
+    this.message = "Added " + this.activeProduct.title + " to cart"
+    this.closeDialog();
+    this.snackBar.open(this.message, action, { 
+      duration: 3500,
+      verticalPosition: 'bottom', 
+      horizontalPosition: 'start',
+      panelClass: ['primary-bg'] });
   }
 
 

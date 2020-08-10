@@ -5,3 +5,27 @@
     margin: 0px 10px;
   }
 }
+.mobile-nav {
+  display: none;
+}
+.nav-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  
+}
+
+@media only screen and(max-width: 1023px) {
+  .main-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
+
+@media only screen and(min-width: 1024px) {
+  .main-nav {
+    display: block;
+  }
+}
