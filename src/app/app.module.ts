@@ -12,10 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ComponentFooterComponent } from './component-footer/component-footer.component';
 import { ProductPageComponent, ProductDetailPopup } from './product-page/product-page.component';
 import { ProductCardComponent } from './_components/product-card/product-card.component';
+import { ServicePageComponent } from './service-page/service-page.component';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     ProductPageComponent,
     ProductCardComponent,
     ProductDetailPopup,
+    ServicePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
     MatRadioModule,
     MatSelectModule,
     MatToolbarModule,
+    MatPaginatorModule,
     CarouselModule.forRoot()
   ],
   providers: [],

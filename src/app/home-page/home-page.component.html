@@ -99,6 +99,10 @@
           </div>
         </mat-toolbar>
 
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
 
           <!--- Note that these columns can be defined in any order.

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FormComponent } from './form/form.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ServicePageComponent } from './service-page/service-page.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,8 @@ const routes: Routes = [
     component: ProductPageComponent
   },
   {
-    path: "form/:id",
-    component: FormComponent
+    path: "services",
+    component: ServicePageComponent
   }
 ];
 
