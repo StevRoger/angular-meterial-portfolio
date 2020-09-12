@@ -30,6 +30,7 @@ import { ComponentFooterComponent } from './component-footer/component-footer.co
 import { ProductPageComponent, ProductDetailPopup } from './product-page/product-page.component';
 import { ProductCardComponent } from './_components/product-card/product-card.component';
 import { ServicePageComponent } from './service-page/service-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ServicePageComponent } from './service-page/service-page.component';
     ProductCardComponent,
     ProductDetailPopup,
     ServicePageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
