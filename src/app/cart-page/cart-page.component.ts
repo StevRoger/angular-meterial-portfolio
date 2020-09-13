@@ -19,4 +19,16 @@ export class CartPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  onActions(result: string, index: any) {
+    if (result == "increase") {
+      this.lstOrderedItem[index].qty += 1;
+    }
+    if (result == "decrease") {
+      this.lstOrderedItem[index].qty -= 1;
+    }
+    if (result == "remove") {
+      this.lstOrderedItem.splice(index, 1);
+    }
+  }
+
 }

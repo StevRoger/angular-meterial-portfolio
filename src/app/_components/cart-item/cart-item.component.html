@@ -6,19 +6,27 @@
           <img [src]="item.img" class="cart-img" alt="">
         </div>
       </div>
-      <div class="my-auto text-center">
+      <div class="my-auto text-center" style="width: 30%;">
         <p class="item-name">{{item.item}}</p>
         <p class="item-name">{{item.price | currency}}</p>
       </div>
       <div class="my-auto">
         <div class="d-flex">
-          <button mat-icon-button><mat-icon>remove</mat-icon></button>
-          <button mat-button>9</button>
-          <button mat-icon-button><mat-icon>add</mat-icon></button>
+          <button mat-icon-button (click)="doActions('decrease')">
+            <mat-icon>remove</mat-icon>
+          </button>
+          <div class="form-group mb-0">
+            <input type="text" min="1" class="form-control form-control-custom" [(ngModel)]="item.qty">
+          </div>
+          <button mat-icon-button (click)="doActions('increase')">
+            <mat-icon>add</mat-icon>
+          </button>
         </div>
       </div>
       <div class="my-auto">
-        <button class="close-button" mat-icon-button><mat-icon>cancel</mat-icon></button>
+        <button class="close-button" mat-icon-button (click)="doActions('remove')">
+          <mat-icon>cancel</mat-icon>
+        </button>
       </div>
     </div>
   </div>

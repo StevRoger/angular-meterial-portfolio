@@ -24,3 +24,13 @@ $primary: #673ab7;
         }
     }
 }
+.mat-button-wrapper {
+    &:focus {
+        outline: none !important;
+    }
+    span {
+        &:focus {
+            outline: none !important;
+        }
+    }
+}

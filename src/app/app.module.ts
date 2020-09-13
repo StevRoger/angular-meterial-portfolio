@@ -17,6 +17,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 
@@ -73,6 +75,8 @@ import { CartItemComponent } from './_components/cart-item/cart-item.component';
     MatSelectModule,
     MatToolbarModule,
     MatPaginatorModule,
+    ReactiveFormsModule,
+    FormsModule,
     CarouselModule.forRoot(),
   ],
   providers: [],
