@@ -32,6 +32,7 @@ import { ProductPageComponent, ProductDetailPopup } from './product-page/product
 import { ProductCardComponent } from './_components/product-card/product-card.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     ProductDetailPopup,
     ServicePageComponent,
     ContactPageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,

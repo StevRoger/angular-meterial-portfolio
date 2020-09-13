@@ -20,6 +20,9 @@ export class ProductPageComponent implements OnInit {
     { id: "002", img: "assets/product/food.jpg", title: "Fantech K65", price: 36.99, short_desc: "" },
     { id: "003", img: "assets/product/food.jpg", title: "Kraken X Ultimate", price: 69.99, short_desc: "" },
     { id: "004", img: "assets/product/food.jpg", title: "Deathadder 2 Pro", price: 119.50, short_desc: "" },
+    { id: "005", img: "assets/product/food.jpg", title: "Razer Viper Mini", price: 69.50, short_desc: "" },
+    { id: "006", img: "assets/product/food.jpg", title: "Samsung Odesey G9", price: 450, short_desc: "" },
+    { id: "007", img: "assets/product/food.jpg", title: "Lenovo Ligeion 7i", price: 450, short_desc: "" },
   ]
 
   constructor(
@@ -82,11 +85,12 @@ export class ProductDetailPopup implements OnInit {
   onAddToCart(action: string) {
     this.message = "Added " + this.activeProduct.title + " to cart"
     this.closeDialog();
-    this.snackBar.open(this.message, action, { 
+    this.snackBar.open(this.message, action, {
       duration: 3500,
-      verticalPosition: 'bottom', 
+      verticalPosition: 'bottom',
       horizontalPosition: 'start',
-      panelClass: ['primary-bg'] });
+      panelClass: ['primary-bg']
+    });
   }
 
 

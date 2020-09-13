@@ -5,6 +5,7 @@ import { FormComponent } from './form/form.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 const routes: Routes = [
   {
@@ -25,8 +26,12 @@ const routes: Routes = [
     component: ServicePageComponent
   },
   {
-    path: "contact", 
+    path: "contact",
     component: ContactPageComponent
+  },
+  {
+    path: "cart",
+    component: CartPageComponent
   }
 ];
 
