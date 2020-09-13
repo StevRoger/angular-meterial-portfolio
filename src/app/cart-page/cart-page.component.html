@@ -10,7 +10,11 @@
           </div>
           <div class="col-12">
             <mat-card>
-
+              <div class="form-row">
+                <div class="col-12" *ngFor="let item of lstOrderedItem">
+                  <app-cart-item [item]="item"></app-cart-item>
+                </div>
+              </div>
             </mat-card>
           </div>
         </div>

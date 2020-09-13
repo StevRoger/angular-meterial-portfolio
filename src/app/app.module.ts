@@ -33,6 +33,7 @@ import { ProductCardComponent } from './_components/product-card/product-card.co
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { CartItemComponent } from './_components/cart-item/cart-item.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     ServicePageComponent,
     ContactPageComponent,
     CartPageComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,
