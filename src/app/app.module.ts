@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent, HomePageDialog } from './home-page/home-page.component';
@@ -30,6 +31,7 @@ import { ComponentFooterComponent } from './component-footer/component-footer.co
 import { ProductPageComponent, ProductDetailPopup } from './product-page/product-page.component';
 import { ProductCardComponent } from './_components/product-card/product-card.component';
 import { ServicePageComponent } from './service-page/service-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { ServicePageComponent } from './service-page/service-page.component';
     ProductCardComponent,
     ProductDetailPopup,
     ServicePageComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,7 @@ import { ServicePageComponent } from './service-page/service-page.component';
     MatSelectModule,
     MatToolbarModule,
     MatPaginatorModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

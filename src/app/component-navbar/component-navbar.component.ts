@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -11,13 +11,14 @@ import { map } from 'rxjs/operators';
 export class ComponentNavbarComponent implements OnInit {
 
   activePage: string = "";
+  @ViewChild("main_nav") mainNav;
 
   constructor(
     private _ActivatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
-
+    
     this._ActivatedRoute.paramMap.subscribe(param => {
 
       let url: Observable<string> = this._ActivatedRoute.url.pipe(map(segment => segment.join('')));

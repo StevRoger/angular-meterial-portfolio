@@ -1,5 +1,10 @@
 $primary: #673ab7;
 
+html {
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+
 .section-title {
     font-weight: 700;
     text-transform: uppercase;
@@ -31,3 +36,12 @@ $primary: #673ab7;
     }
 }
 
+.slide-title {
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1.5px;
+}
+.slide-sub-title {
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+}

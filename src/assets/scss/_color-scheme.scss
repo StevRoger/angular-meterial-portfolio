@@ -16,3 +16,7 @@
     background-color: $primary;
     color: #ffffff;
 }
+/* this class will be toggled */
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
