@@ -1,0 +1,39 @@
+$primary: #673ab7;
+
+.detail-text-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.detail-text-value {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.divider {
+    border-bottom: 2px solid #cbc9c9;
+    height: 2px;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    margin-bottom: 14px;
+    position: relative;
+}
+.btn-order {
+    border: 2px solid $primary;
+    background-color: $primary;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #ffffff;
+        color: $primary;
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+.primary-text {
+    color: $primary;
+}

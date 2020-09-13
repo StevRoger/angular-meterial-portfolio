@@ -1,7 +1,7 @@
 <component-navbar></component-navbar>
 
 <section>
-  <div class="container my-5">
+  <div class="container mb-5 mt-4">
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="row">
@@ -9,7 +9,7 @@
             <h5 class="section-title">Ordered Items</h5>
           </div>
           <div class="col-12">
-            <mat-card>
+            <mat-card style="height: 59vh; overflow-y: auto;">
               <div class="form-row">
                 <div class="col-12" *ngFor="let item of lstOrderedItem, let i = index">
                   <app-cart-item [item]="item" (actionsEmitter)="onActions($event, i)"></app-cart-item>
@@ -25,8 +25,58 @@
             <h5 class="section-title">Detail</h5>
           </div>
           <div class="col-12">
-            <mat-card>
-
+            <mat-card style="height: 59vh; overflow-y: auto;">
+              <mat-card-content>
+                <div class="form-row">
+                  <div class="col-12">
+                    <mat-form-field appearance="outline" class="w-100" floatLabel="always">
+                      <mat-label>Name</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-12">
+                    <mat-form-field appearance="outline" class="w-100" floatLabel="always">
+                      <mat-label>Phone</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-12">
+                    <mat-form-field appearance="outline" class="w-100" floatLabel="always">
+                      <mat-label>Address</mat-label>
+                      <textarea matInput rows="3"></textarea>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-12">
+                    <mat-checkbox color="primary">Use fast shipment (LYPD)</mat-checkbox>
+                  </div>
+                  <div class="col-12 mb-2">
+                    <mat-checkbox color="primary">Break free warranty service</mat-checkbox>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="col-12">
+                    <div class="d-flex justify-content-between mb-1">
+                      <p class="detail-text-label">Subtotal</p>
+                      <p class="detail-text-value">{{subTotal | currency}}</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <p class="detail-text-label">Discount</p>
+                      <p class="detail-text-value">{{discount | percent}}</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <p class="detail-text-label">Delivery</p>
+                      <p class="detail-text-value">{{delivery | currency}}</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <p class="detail-text-label">Grand Total</p>
+                      <p class="detail-text-value">{{grandTotal | currency}}</p>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-actions class="card-action-wrapper">
+                <button mat-button class="btn btn-md btn-block btn-order">Proccess Order
+                  ({{grandTotal | currency}})</button>
+              </mat-card-actions>
             </mat-card>
           </div>
         </div>
