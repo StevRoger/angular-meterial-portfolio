@@ -4,6 +4,7 @@ $primary: #673ab7;
     font-weight: 400;
     text-transform: capitalize;
     margin-bottom: 0px;
+    font-size: 14px;
 }
 .item-cart {
     font-family: "Inter", sans-serif;
@@ -22,5 +23,20 @@ $primary: #673ab7;
 
     &:hover {
         color: #f72222 !important;
+    }
+}
+.form-control-custom {
+    max-width: 70px;
+    text-align: center !important;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+        border: 2px solid #4d4d4d;
+    }
+
+    &:focus {
+        border: 2px solid $primary !important;
+        box-shadow: none !important;
     }
 }

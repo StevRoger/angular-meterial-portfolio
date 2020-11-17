@@ -14,9 +14,40 @@ export class CartPageComponent implements OnInit {
     { item: "Samsung Odesey G9", qty: 1, price: 899, img: "assets/product/food.jpg" },
     { item: "Gaming Chair Valkeries", qty: 1, price: 299, img: "assets/product/food.jpg" },
   ];
+
+  subTotal: number = 0;
+  discount: number = 0;
+  delivery: number = 15;
+  grandTotal: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+    this.onCalculatePrice();
+  }
+
+  onCalculatePrice() {
+    this.subTotal = 0;
+    this.grandTotal = 0;
+    this.delivery = 15;
+
+    this.lstOrderedItem.forEach(item => {
+      this.subTotal += item.price * item.qty;
+    });
+    this.grandTotal += this.delivery + this.subTotal;
+  }
+
+  onActions(result: string, index: any) {
+    if (result == "increase") {
+      this.lstOrderedItem[index].qty += 1;
+    }
+    if (result == "decrease") {
+      this.lstOrderedItem[index].qty -= 1;
+    }
+    if (result == "remove") {
+      this.lstOrderedItem.splice(index, 1);
+    }
+    this.onCalculatePrice();
   }
 
 }

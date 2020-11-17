@@ -17,7 +17,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -75,7 +77,8 @@ import { FullPageScrollComponent } from './full-page-scroll/full-page-scroll.com
     MatSelectModule,
     MatToolbarModule,
     MatPaginatorModule,
-    NgxImageZoomModule,
+    ReactiveFormsModule,
+    FormsModule,
     CarouselModule.forRoot(),
   ],
   providers: [],
