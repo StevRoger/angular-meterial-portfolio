@@ -10,6 +10,7 @@ html {
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #101325;
+    font-family: "Inter", sans-serif !important;
 
     &::before {
         position: absolute;
@@ -44,4 +45,21 @@ html {
 .slide-sub-title {
     font-weight: 400;
     font-family: "Inter", sans-serif;
+}
+
+// .img-zoom-wrapper {
+//     ngx-image-zoom {
+//         .ngxImageZoomContainer {
+//             width: 100% !important;
+//             height: 500px !important;
+//         }
+//     }
+// }
+// .ngxImageZoomFullContainer.ngxImageZoomLensEnabled {
+//     border: 2px solid white !important;
+//     cursor: crosshair;
+// }
+.ngxImageZoomFullContainer.ngxImageZoomLensEnabled {
+    border: 2px solid transparent !important;
+    cursor: crosshair;
 }

@@ -6,6 +6,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { FullPageScrollComponent } from './full-page-scroll/full-page-scroll.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: "cart",
     component: CartPageComponent
+  },
+  {
+    path: "full-page-scroll",
+    component: FullPageScrollComponent
   }
 ];
 

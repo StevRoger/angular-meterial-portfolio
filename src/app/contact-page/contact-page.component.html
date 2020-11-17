@@ -9,6 +9,13 @@
       <div class="col-12">
         <button mat-button (click)="alertClick()">Alert</button>
       </div>
+      <div class="col-12">
+        <div class="img-zoom-wrapper position-relative">
+          <ngx-image-zoom [thumbImage]="img" [fullImage]="img" [magnification]="2" [enableScrollZoom]="true"
+            [enableLens]="true" [lensWidth]="300" [lensHeight]="200">
+          </ngx-image-zoom>
+        </div>
+      </div>
     </div>
   </div>
 </section>

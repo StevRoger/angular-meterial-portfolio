@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-page.component.scss']
 })
 export class ContactPageComponent implements OnInit {
-
+  img: any = "assets/bg-img/pic-0001.jpg";
   constructor() { }
 
   ngOnInit() {

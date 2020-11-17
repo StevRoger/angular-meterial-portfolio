@@ -17,7 +17,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +34,7 @@ import { ServicePageComponent } from './service-page/service-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CartItemComponent } from './_components/cart-item/cart-item.component';
+import { FullPageScrollComponent } from './full-page-scroll/full-page-scroll.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { CartItemComponent } from './_components/cart-item/cart-item.component';
     ContactPageComponent,
     CartPageComponent,
     CartItemComponent,
+    FullPageScrollComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +75,7 @@ import { CartItemComponent } from './_components/cart-item/cart-item.component';
     MatSelectModule,
     MatToolbarModule,
     MatPaginatorModule,
+    NgxImageZoomModule,
     CarouselModule.forRoot(),
   ],
   providers: [],
