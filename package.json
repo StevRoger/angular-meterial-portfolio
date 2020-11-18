@@ -1,6 +1,6 @@
 {
   "name": "angular-meterial",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -61,5 +61,20 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2",
     "webpack-cli": "^4.2.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9. This project was integrated with Angular Server Side Rendering (SSR).",
+  "main": "webpack.server.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevRoger/angular-meterial-portfolio.git"
+  },
+  "keywords": [
+    "GG"
+  ],
+  "author": "Pholla Doll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StevRoger/angular-meterial-portfolio/issues"
+  },
+  "homepage": "https://github.com/StevRoger/angular-meterial-portfolio#readme"
 }
