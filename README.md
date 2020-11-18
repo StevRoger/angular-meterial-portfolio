@@ -1,10 +1,13 @@
 # AngularMeterial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was integrated with Angular Server Side Rendering (SSR).
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run build:ssr` for build a SSR dist folder.
+Run `npm run serve:ssr` for a test server. Navigate to `http://localhost:4200/`. This will use SSR service to run project.
 
 ## Code scaffolding
 
