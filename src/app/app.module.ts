@@ -58,7 +58,7 @@ import { FullPageScrollComponent } from './full-page-scroll/full-page-scroll.com
     FullPageScrollComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'angular-material' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
