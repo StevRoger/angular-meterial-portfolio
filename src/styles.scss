@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import '~@ngx-share/button/themes/material/material-dark-theme';
+@import '~@ngx-share/button/themes/modern/modern-light-theme';
+
+
+@import "./assets/scss/font";
 @import "./assets/scss/menu-custom";
 @import "./assets/scss/typography";
 @import "./assets/scss/button";
