@@ -46,20 +46,18 @@ html {
     font-weight: 400;
     font-family: "Inter", sans-serif;
 }
-
-// .img-zoom-wrapper {
-//     ngx-image-zoom {
-//         .ngxImageZoomContainer {
-//             width: 100% !important;
-//             height: 500px !important;
-//         }
-//     }
-// }
-// .ngxImageZoomFullContainer.ngxImageZoomLensEnabled {
-//     border: 2px solid white !important;
-//     cursor: crosshair;
-// }
-.ngxImageZoomFullContainer.ngxImageZoomLensEnabled {
-    border: 2px solid transparent !important;
-    cursor: crosshair;
+.mat-checkbox,
+.mat-radio-button {
+    font-family: "Inter", "Helvetica Neue", sans-serif !important;
+}
+.mat-button,
+.mat-fab,
+.mat-flat-button,
+.mat-icon-button,
+.mat-mini-fab,
+.mat-raised-button,
+.mat-stroked-button {
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
 }

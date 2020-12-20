@@ -37,6 +37,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { CartItemComponent } from './_components/cart-item/cart-item.component';
 import { FullPageScrollComponent } from './full-page-scroll/full-page-scroll.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AdminSideModule } from './admin-side/admin-side.module';
 
 
 const customConfig = {
@@ -85,6 +86,7 @@ const customConfig = {
     HttpClientModule,
     CarouselModule.forRoot(),
     ShareButtonsModule.withConfig(customConfig),
+    AdminSideModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

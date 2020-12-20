@@ -6,14 +6,26 @@
         <button mat-button routerLink="/product" [ngClass]="{'nav-active': activePage == 'product'}">Products</button>
         <button mat-button routerLink="/services" [ngClass]="{'nav-active': activePage == 'services'}">Services</button>
         <button mat-button routerLink="/contact" [ngClass]="{'nav-active': activePage == 'contact'}">Contact</button>
-        <!-- <button mat-button routerLink="/full-page-scroll"
-          [ngClass]="{'nav-active': activePage == 'full-page-scroll'}">Full Page Scroll</button> -->
       </div>
       <div class="">
         <button mat-button><span class="material-icons">search</span></button>
         <button mat-button><span class="material-icons" routerLink="/cart"
             [ngClass]="{'nav-active': activePage == 'cart'}">local_mall</span></button>
-        <button mat-button><span class="material-icons">person</span></button>
+        <button mat-button [matMenuTriggerFor]="userMenu"><span class="material-icons">person</span></button>
+        <mat-menu #userMenu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item routerLink="/dashboard">
+            <mat-icon>admin_panel_settings</mat-icon>
+            <span>Admin</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
       </div>
     </div>
 
